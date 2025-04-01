@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notenberechnung</title>
+    <script src="./range-slider.js"></script>
+    <link rel="stylesheet" href="./range-slider.css"/>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<br>
+    <h1>Notenberechnung im Referendariat (Realschule)</h1>
+    <h2>Prüfungslehrproben (3 Einzelnoten)</h2>
+    <div class="slider-container">
+        <div>
+            <p class="slider-label">1. Prüfungslehrprobe</p>
+            <range-slider name="plp-1"></range-slider>
+        </div>
+        <div>
+            <p class="slider-label">2. Prüfungslehrprobe</p>
+            <range-slider name="plp-2"></range-slider>
+        </div>
+        <div>
+            <p class="slider-label">3. Prüfungslehrprobe</p>
+            <range-slider name="plp-3"></range-slider>
+        </div>
+    </div>
+    <div class="avg" id="lehrproben-avg">Durchschnitt der Prüfungslehrproben: </div>
+    <h2>Kolloquium (Pädagogik/Psychologie)</h2>
+    <range-slider name="kolloquium"></range-slider>
+    <h2>Mündliche Prüfungen (3 Einzelnoten)</h2>
+    <div class="slider-container">
+        <div>
+            <p class="slider-label">GSB/Schulrecht</p>
+            <range-slider name="gsb-sr"></range-slider>
+        </div>
+        <div>
+            <p class="slider-label">Mdl. Prüfung 1. Unterrichtsfach</p>
+            <range-slider name="mdl-1"></range-slider>
+        </div>
+        <div>
+            <p class="slider-label">Mdl. Prüfung 2. Unterrichtsfach</p>
+            <range-slider name="mdl-2"></range-slider>
+        </div>
+    </div>
+    <div class="avg" id="mdl-avg">Durchschnitt der Mündlichen Prüfungen: </div>
+    <h2>Schriftliche Hausarbeit</h2>
+    <range-slider name="hausarbeit"></range-slider>
+    <h2>Gutachten (3 Einzelnoten)</h2>
+    <div class="slider-container">
+        <div>
+            <p class="slider-label">Unterrichtskompetenz (x3)</p>
+            <range-slider name="unterricht"></range-slider>
+        </div>
+        <div>
+            <p class="slider-label">Erzieherischen Kompetenz (x3)</p>
+            <range-slider name="erzieherisch"></range-slider>
+        </div>
+        <div>
+            <p class="slider-label">Handlungs- und Sachkompetenz (x2)</p>
+            <range-slider name="handlung-sach"></range-slider>
+        </div>
+    </div>
+    <div class="avg" id="gutachten-avg">Durchschnitt des Gutachtens: </div>
+    <h1 style="color: red;">1. Staatsexamen:</h1>
+    <div>
+        Gesamtnote 1. Staatsexamen: <input type="number" id="examen-1" name="examen-1" step="0.10" min="1.00" max="6.00" value="3.00" onblur="formatDecimal(this)">
+    </div> 
+    <h1 style="color: red;">2. Staatsexamen:</h1>
+    <div class="avg" id="gesamtnote-2-avg">Gesamtnote 2. Staatsexamen: </div>
+    <h1 style="color: red;">Gesamtnote Staatsexamen:</h1>
+    <div class="avg" id="examennote-avg" style="padding-bottom: 4rem;">Gesamtnote Staatsexamen: </div>
+</body>
+<script src="./update-averages.js"></script>
+</html>
